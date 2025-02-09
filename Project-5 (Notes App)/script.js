@@ -40,6 +40,12 @@ notesContainer.addEventListener("keyup",(e)=>{
     }
 })
 
+document.addEventListener("keydown",(event)=>{
+    if(event.key=="Enter"){
+        document.execCommand("insertLineBreak")
+        event.preventDefault()
+    }
+})
 
 function updateStorage(){
     localStorage.setItem("notes",notesContainer.innerHTML)
