@@ -24,7 +24,7 @@ body{
         align-items: center;
         width: 100%;
 
-        .searchInput{
+        #searchInput{
             flex: 1;
             margin-right: 16px;
             padding: 10px 25px;
