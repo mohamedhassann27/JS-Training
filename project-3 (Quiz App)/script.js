@@ -5,32 +5,32 @@ const answersBtnElement=document.querySelector(".quiz__answersBtn")
 
 const questions=[
     {
-        question:"ماهي عاصمة العدوه", 
+        question:"ما هو الركن الأول من أركان الإسلام؟", 
         answers:[
-            {text: "المنشيه", correct:false},
-            {text: "الصفطيين", correct:true},
-            {text: "ابوعدس", correct:false},
-            {text: "الجرابعه", correct:false}
+            {text: "الصلاة", correct:false},
+            {text: "الشهادتان", correct:true},
+            {text: "الزكاة", correct:false},
+            {text: "الصيام", correct:false}
         ]
     },
 
     {
-        question:"ما اكبر حيوان في العالم",
+        question:"كم عدد سور القرآن الكريم؟",
         answers:[
             {
-                text: "القطه",
+                text: "100",
                 correct:false
             },
             {
-                text: "البسه",
+                text: "120",
                 correct:false
             },
             {
-                text: "الدبانه",
+                text: "99",
                 correct:false
             },
             {
-                text: "الصرصار",
+                text: "114",
                 correct:true
             }
         ]
@@ -38,29 +38,28 @@ const questions=[
     },
 
     {
-        question:"ما أصغر حيوان في العالم",
+        question:"في أي شهر نزل القرآن الكريم؟",
         answers:[
             {
-                text: "القطه",
+                text: "ربيع الأول",
                 correct:false
             },
             {
-                text: "البسه",
-                correct:false
-            },
-            {
-                text: "الدبانه",
-                correct:false
-            },
-            {
-                text: "الصرصار",
+                text: "رمضان",
                 correct:true
+            },
+            {
+                text: "محرم",
+                correct:false
+            },
+            {
+                text: "ذو الحجة",
+                correct:false
             }
         ]
 
     }
 ]
-
 
 let currentQuestionIndex=0;
 let score=0;
