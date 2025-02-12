@@ -39,3 +39,9 @@ const fetchTasks=()=>{
 
 fetchTasks()
 addElement.addEventListener("click",()=> addTask())
+
+document.querySelector(".rowInput").addEventListener("keyup",(e)=>{
+    if(e.key=="Enter"){
+        addTask()
+    }
+})
