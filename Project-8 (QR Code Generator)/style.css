@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{background-color: #262a2f;}
+.container{
+    width: 80%;
+    max-width: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    background-color: #fff;
+    /* box-shadow: 0 0 1px 1px white; */
+    padding: 2rem;
+    border-radius: 10px;
+    font-family: "Poppins",sans-serif;
+
+    input,button{
+        padding: 1rem .5rem;
+        border: 1px solid #494eea;
+        outline: none;
+        border-radius: 5px;
+        /* transition: ; */
+    }
+
+    .imgBox{
+        max-height: 0;
+        overflow: hidden;
+        width: 200px;
+        border-radius: 5px;
+        margin: auto;
+        img{height: 100%;width: 100%;padding: 10px;}
+        transition: max-height .3s;
+
+        &.showImg{
+            max-height: 300px;
+            border: 1px solid #d1d1d1;
+        }
+    }
+    button{
+        cursor: pointer;
+        background-color: #494eea;
+        color: white;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        font-weight: 500;
+    }
+
+    input.error{
+        animation: error .1s linear 10;
+    }
+}
+
+@keyframes error {
+    0%{transform: translateX(0)}
+    25%{transform: translateX(-2px);}
+    50%{transform: translateX(0);}
+    75%{transform: translateX(2px);}
+    100%{transform: translateX(0);}
+}
