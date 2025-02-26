@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-color: #333;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quranPlayer{
+    width: 80%;
+    max-width: 400px;
+    background-color: #ffe0e5;
+    padding: 1.5rem 2rem 2.5rem;
+    text-align: center;
+    font-family: sans-serif;
+    border-radius: 5px;
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+        .icon{
+            background-color: white;
+            color: #f53192;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 18px;
+            text-align: center;
+            box-shadow: 0 5px 10px  rgba(255, 26, 26, 0.22);
+        }
+    }
+
+    img{
+        max-width: 100%;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        margin:1.5rem 0 1rem;
+        border: 7px solid #fff;
+        box-shadow: 0 5px 10px rgba(255, 26, 26, 0.22);
+    }
+
+    h2{color: #333;font-size: 20px;}
+    
+    p{margin: .5rem 0; color: #333;font-size: 14px;}
+    
+    audio{
+        margin: .5rem 0 1rem;
+    }
+    
+    .progress{
+        appearance: none;
+        width: 100%;
+        height: 6px;
+        background-color: #f53192; 
+        border-radius: 5px;
+        cursor: pointer;
+
+        &::-webkit-slider-thumb{
+            appearance: none;
+            background-color: #f53192;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            box-shadow: 0 5px 5px rgba(255, 26, 26, 0.22);
+        }
+
+    }
+
+    .controls{
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        margin-top: 2.5rem;
+        .icon{
+            color: #f53192;
+            background-color: #eee;
+            height: 3rem;
+            width: 3rem;
+            line-height: 3rem;
+            text-align: center;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 5px 10px rgba(255, 26, 26, 0.22);
+
+            &:nth-child(2){
+                background-color: #f53192;
+                color: #eee;
+                transform: scale(1.5);
+            }
+            /* font-size: 18px; */
+        }
+    }
+
+}
