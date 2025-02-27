@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{background-color: #e3f9ff;}
+
+.container{
+    width: 85%;
+    max-width: 400px;
+    padding: 1.5rem 2rem;
+    background-color: #3a4452;
+    border-radius: 10px;
+    font-family: sans-serif;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+
+    #display{
+        height: 6rem; 
+        width: 100%;
+        margin-bottom: 18px;
+        font-size: 45px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: white;
+        text-align: end;
+    }
+
+    .btns{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(50px,1fr));
+        gap: 1.5rem;
+
+        input{
+            box-shadow: -8px -8px 15px rgba(255,255,255,0.1),5px 5px 15px rgba(0,0,0,.2);
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            font-size: 20px;
+            border-radius: 10px;
+            color: white;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            display: block;
+
+            &.equal{width: 155px;}
+            &.operator{color: #33ffd8;}
+        }
+    }
+
+}
