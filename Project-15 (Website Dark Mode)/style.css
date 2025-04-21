@@ -1,0 +1,131 @@
+:root{
+    --whiteColor:white;
+    --blackColor:black;
+    --backgroundColor: var(--whiteColor);
+    --textColor: var(--blackColor);
+    --buttonColor: var(--whiteColor);
+    --orangeColor:#f25907;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    color: var(--textColor);
+    background-color: var(--backgroundColor);
+}
+.container{
+    width: 85%;
+    margin: 0 auto;
+    /* background-color: var(--orangeColor); */
+    padding: 1rem;
+
+    nav{
+        padding: .5rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h1{font-family:cursive; font-size: 40px;}
+        ul{
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            a{
+                text-decoration: none;
+                color: var(--textColor);
+                font-size: 17px;
+                transition: .2s;
+                &:hover{color: var(--orangeColor);}
+            }
+            .icon{
+                font-size: 23px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    #home{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 2rem;
+        div{flex:1;}
+        h2{
+            font-size: 2.6rem;
+            span{color: var(--orangeColor);}
+        }
+        p{
+            margin: 1.5rem 0;
+        }
+        button{
+            padding: .5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            background-color: var(--textColor);
+            color:var(--buttonColor) ;
+            cursor: pointer;
+            transition: 1s;
+
+            background: linear-gradient(to top, var(--textColor) 50%, var(--orangeColor) 50%);
+            background-size: 100% 200%;
+            background-position: bottom;
+            transition: background-position 0.4s ease-in-out;
+
+            &:hover{
+                background-position: top;
+            }
+        }
+
+        .imgCont{
+            text-align: center;
+            position: relative;
+            svg{
+                position: absolute;
+                top: 45%;
+                left: 55%;
+                transform: translate(-50%,-50%);
+                z-index: -1;
+                width: 90%;
+                /* height: 70rem; */
+                transition: .5s;
+            }
+            img{
+                width: 25rem;
+                max-width: 100%;
+                height: 32rem;
+                transition: 1s;
+            }
+
+            &:hover{
+                svg{
+                    top: 30%;
+                }
+                img{
+                    transform: translateX(1.5rem);
+                }
+            }
+        }
+    }
+
+}
+.darkMode{
+    --backgroundColor: var(--blackColor);
+    --textColor:var(--whiteColor);
+    --buttonColor:var(--blackColor)
+}
+
+
+@media (max-width:550px){
+    .container nav ul li{display: none;}
+    #home{
+        flex-direction: column-reverse;
+    }
+}
+
+
+
